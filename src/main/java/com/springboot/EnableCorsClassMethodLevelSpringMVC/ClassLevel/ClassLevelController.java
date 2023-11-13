@@ -1,6 +1,8 @@
 package com.springboot.EnableCorsClassMethodLevelSpringMVC.ClassLevel;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,4 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(path = "api/v1/cors")
 public class ClassLevelController {
+
+    @GetMapping("/hello")
+    public ResponseEntity<String> getPlainText() {
+        // Logic to generate plain text
+        String plainText = "Hello, this is plain text response from the server.";
+
+        // ResponseEntity with the plain text and status code
+        return ResponseEntity.ok(plainText);
+    }
 }
