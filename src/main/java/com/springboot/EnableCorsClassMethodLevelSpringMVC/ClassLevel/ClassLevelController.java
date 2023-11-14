@@ -15,7 +15,7 @@ public class ClassLevelController {
     @GetMapping("/class/level")
     public ResponseEntity<String> getPlainText() {
         // Logic to generate plain text
-        String plainText = "Hello, this is plain text response from the server.";
+        String plainText = "Hello, this is plain text response from the enabled class level cors.";
 
         // ResponseEntity with the plain text and status code
         return ResponseEntity.ok(plainText);
