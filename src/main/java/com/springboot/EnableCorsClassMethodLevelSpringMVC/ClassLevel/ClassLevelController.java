@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "api/v1/cors", produces = "text/plain")
 public class ClassLevelController {
 
-    @GetMapping("/hello")
+    @GetMapping("/class/level")
     public ResponseEntity<String> getPlainText() {
         // Logic to generate plain text
         String plainText = "Hello, this is plain text response from the server.";
