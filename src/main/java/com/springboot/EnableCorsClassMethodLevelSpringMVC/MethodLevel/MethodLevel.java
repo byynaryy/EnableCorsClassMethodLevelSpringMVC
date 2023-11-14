@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "api/v1/cors", produces = "text/plain")
 public class MethodLevel {
 
+    @GetMapping("/method/level")
     public ResponseEntity<String> getPlainText() {
         // Logic to generate plain text
         String plainText = "Hello, this is plain text response from the enabled method level cors.";
