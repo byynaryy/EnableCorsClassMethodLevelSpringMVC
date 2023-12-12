@@ -8,15 +8,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
+// Enable class level cors
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RequestMapping(path = "api/v1/cors", produces = "text/plain")
 public class MethodLevel {
 
     // Enable method level cors
-    @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+    //@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
     @GetMapping("/method/level")
     public ResponseEntity<String> getPlainText() {
         // Logic to generate plain text
-        String plainText = "Hello, this is plain text response from the enabled method level cors.";
+        String plainText = "Hello, this is a plain text response from the enabled class and method level cors.";
 
         // ResponseEntity with the plain text and status code
         return ResponseEntity.ok(plainText);
